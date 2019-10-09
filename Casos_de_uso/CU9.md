@@ -1,6 +1,8 @@
 ## Añadir tratamiento
 **ID:** 09 **Descripcion:** Introducimos un nuevo tratamiento para un paciente en el sistema
+
 **Actores principales** Administrador
+
 **Precondiciones**
   * El usuario existe en el sistema
 
