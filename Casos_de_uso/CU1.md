@@ -7,8 +7,10 @@
  * Ninguna.
  
 **Flujo principal**
-  1. El administridor añade un paciente al sistema.
-  2. El sistema guarda los datos del paciente.
+  1. El administrador selecciona la opción de añadir paciente.
+  2. El administrador va completando la información solicitada por el sistema.
+  3. El administrador confirma los datos.
+  4. Los datos se guardan en el sistema.
   
 **Postcondiciones**
   * Ninguna.
