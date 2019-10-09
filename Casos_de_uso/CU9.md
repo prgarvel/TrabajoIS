@@ -15,5 +15,5 @@
   * El tratamiento tiene que estar guardado en el sistema
 
 **Flujos alternativos**
-  2.a. Si el usuario no existe en el sistema se mostrara una venta
 
+  2.a. Si el usuario no existe en el sistema se mostrara una venta
