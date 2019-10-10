@@ -18,4 +18,4 @@
 
 **Flujos alternativos**
 
-  2.a. Si el usuario no existe en el sistema se mostrara una venta
+  * Si el usuario no existe en el sistema se mostrará un aviso.
