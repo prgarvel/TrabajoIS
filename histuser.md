@@ -1,63 +1,63 @@
 # Historias de usuario
-**ID:** 01 **Nombre:** ---------------
+**ID:** 01 **Nombre:** Añadir paciente al sistema
 
-**Prioridad** (Del 1 al 10): 6
+**Prioridad** (Del 1 al 10): 9
 
 **Responsable:** Manuel García Velasco
 
 **Descripción:**
 
-Como administrador del sistema quiero poder -------------------
+Como administrador del sistema quiero poder dar de alta a un paciente en el sistema.
 
 **Validación:**
-  * Se debe poder añadir tratamientos al sistema
-  * Es necesario saber el nombre del paciente
-  * El paciente tiene que estar en el
+  * El paciente deberá quedar registrado correctamente en el sistema.
+  * No podrá registrarse de nuevo el mismo paciente.
   
-  **ID:** 02 **Nombre:** ---------------
+  **ID:** 02 **Nombre:** Modificar paciente del sistema
 
-**Prioridad** (Del 1 al 10): 6
+**Prioridad** (Del 1 al 10): 9
 
 **Responsable:** Manuel García Velasco
 
 **Descripción:**
 
-Como administrador del sistema quiero poder -------------------
+Como administrador del sistema quiero poder modificar la información de un paciente existente.
 
 **Validación:**
-  * Se debe poder añadir tratamientos al sistema
-  * Es necesario saber el nombre del paciente
-  * El paciente tiene que estar en el
+  * Se debe poder modificar cualquier campo del paciente.
+  * Es necesario saber el nombre del paciente o su identificador para seleccionarlo.
+  * El paciente tiene que existir.
   
-  **ID:** 03 **Nombre:** ---------------
+  **ID:** 03 **Nombre:** Eliminar paciente
 
-**Prioridad** (Del 1 al 10): 6
+**Prioridad** (Del 1 al 10): 3
 
 **Responsable:** Manuel García Velasco
 
 **Descripción:**
 
-Como administrador del sistema quiero poder -------------------
+Como administrador del sistema quiero poder eliminar a un paciente del sistema.
 
 **Validación:**
-  * Se debe poder añadir tratamientos al sistema
+  * El usuario y su información deberá desaparecer del sistema.
   * Es necesario saber el nombre del paciente
-  * El paciente tiene que estar en el
+  * El paciente tiene que estar en el sistema.
+  * Podrá añadirse posteriormente un paciente nuevo con la misma información que el eliminado.
   
-  **ID:** 04 **Nombre:** ---------------
+  **ID:** 04 **Nombre:** Consultar información de un paciente.
 
-**Prioridad** (Del 1 al 10): 6
+**Prioridad** (Del 1 al 10): 9
 
 **Responsable:** Manuel García Velasco
 
 **Descripción:**
 
-Como administrador del sistema quiero poder -------------------
+Como administrador del sistema quiero poder visualizar la información relativa a un paciente.
 
 **Validación:**
-  * Se debe poder añadir tratamientos al sistema
-  * Es necesario saber el nombre del paciente
-  * El paciente tiene que estar en el
+  * Se debe poder visualizar toda la información relativa a un paciente o información parcial.
+  * Es necesario saber el nombre del paciente.
+  * El paciente tiene que estar registrado en el sistema.
   
 **ID:** 09 **Nombre:** Añadir tratamiento
 
@@ -67,12 +67,12 @@ Como administrador del sistema quiero poder -------------------
 
 **Descripción:**
 
-Como administrador del sistema quiero poder introducir los tratamientos de los pacientes
+Como administrador del sistema quiero poder introducir los tratamientos de los pacientes.
 
 **Validación:**
-  * Se debe poder añadir tratamientos al sistema
-  * Es necesario saber el nombre del paciente
-  * El paciente tiene que estar en el 
+  * Se debe poder añadir tratamientos al sistema.
+  * Es necesario saber el nombre del paciente.
+  * El paciente tiene que estar en el sistema.
 
 
 **ID:** 10 **Nombre:** Eliminar tratamiento
@@ -83,12 +83,12 @@ Como administrador del sistema quiero poder introducir los tratamientos de los p
 
 **Descripción:**
 
-Como administrador del sistema quiero poder eliminar un tratamientos de los pacientes
+Como administrador del sistema quiero poder eliminar un tratamientos de los pacientes.
 
 **Validación:**
-  * Se debe poder eliminar tratamientos al sistema
-  * Es necesario saber el nombre del paciente
-  * El tratamiento debe eliminarse al final
+  * Se debe poder eliminar tratamientos al sistema.
+  * Es necesario saber el nombre del paciente.
+  * El tratamiento debe eliminarse al final.
 
 
 **ID:** 11 **Nombre:** Modificar tratamiento
@@ -99,13 +99,13 @@ Como administrador del sistema quiero poder eliminar un tratamientos de los paci
 
 **Descripción:**
 
-Como administrador del sistema quiero poder modificar un tratamientos de los pacientes para añadir, cambiar o extender el tratamiento de un paciente
+Como administrador del sistema quiero poder modificar un tratamientos de los pacientes para añadir, cambiar o extender el tratamiento de un paciente.
 
 **Validación:**
-  * Se debe poder modificar el tratamientos
-  * Es necesario saber el tratamiento que se quiere modificar
-  * Puede buscarse por nombre del paciente
-  * Se deben guardar los cambios
+  * Se debe poder modificar el tratamientos.
+  * Es necesario saber el tratamiento que se quiere modificar.
+  * Puede buscarse por nombre del paciente.
+  * Se deben guardar los cambios.
 
 
 **ID:** 12 **Nombre:** Consultar tratamiento
@@ -119,9 +119,9 @@ Como administrador del sistema quiero poder modificar un tratamientos de los pac
 Como administrador del sistema quiero poder consultar los tratamientos de los pacientes.
 
 **Validación:**
-  * Se debe poder consultar cualquier tratamiento de los pacientes
-  * Se deben mostrar los tratamientos en una lista
-  * Puede buscarse por nombre del paciente
+  * Se debe poder consultar cualquier tratamiento de los pacientes.
+  * Se deben mostrar los tratamientos en una lista.
+  * Puede buscarse por nombre del paciente.
 
 
 **ID:** 13 **Nombre:** Añadir historial
