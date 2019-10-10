@@ -1,5 +1,5 @@
 ## Añadir cita
-** Fecha DD/MM/AAAA ** **Descripcion ** Añadimos una cita al sitema
+** ID: ** 5 ** Descripción** Se añade una cita al sistema.
 
 ** Actores principales ** Administrador
 
