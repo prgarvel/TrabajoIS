@@ -17,4 +17,4 @@
   * No deberá volver a poder listarse ese paciente.
 
 **Flujos alternativos**
-  * En caso de que el paciente no se encuentre registrado en el sistema devolverá un mensaje de aviso.v
+  * En caso de que el paciente no se encuentre registrado en el sistema devolverá un mensaje de aviso.
