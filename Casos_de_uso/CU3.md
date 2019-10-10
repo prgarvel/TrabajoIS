@@ -1,5 +1,5 @@
 ## Eliminar paciente
-**ID:** 4 **Descripcion:** Eliminamos el registro de un paciente en el sistema.
+**ID:** 3 **Descripcion:** Eliminamos el registro de un paciente en el sistema.
 
 **Actores principales** Administrador.
 
