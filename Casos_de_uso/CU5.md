@@ -4,7 +4,7 @@
 ** Actores principales ** Administrador
 
 ** Precondicion ** 
-  * Que no exista ninguna cita en la fecha indicada*
+   *se verifica que no exista una cita en la fecha indicada* 
  
  **flujo principal**
   1. El administrador selecciona la opción de agregar cita.
