@@ -1,5 +1,64 @@
 # Historias de usuario
+**ID:** 01 **Nombre:** ---------------
 
+**Prioridad** (Del 1 al 10): 6
+
+**Responsable:** Manuel García Velasco
+
+**Descripción:**
+
+Como administrador del sistema quiero poder -------------------
+
+**Validación:**
+  * Se debe poder añadir tratamientos al sistema
+  * Es necesario saber el nombre del paciente
+  * El paciente tiene que estar en el
+  
+  **ID:** 02 **Nombre:** ---------------
+
+**Prioridad** (Del 1 al 10): 6
+
+**Responsable:** Manuel García Velasco
+
+**Descripción:**
+
+Como administrador del sistema quiero poder -------------------
+
+**Validación:**
+  * Se debe poder añadir tratamientos al sistema
+  * Es necesario saber el nombre del paciente
+  * El paciente tiene que estar en el
+  
+  **ID:** 03 **Nombre:** ---------------
+
+**Prioridad** (Del 1 al 10): 6
+
+**Responsable:** Manuel García Velasco
+
+**Descripción:**
+
+Como administrador del sistema quiero poder -------------------
+
+**Validación:**
+  * Se debe poder añadir tratamientos al sistema
+  * Es necesario saber el nombre del paciente
+  * El paciente tiene que estar en el
+  
+  **ID:** 04 **Nombre:** ---------------
+
+**Prioridad** (Del 1 al 10): 6
+
+**Responsable:** Manuel García Velasco
+
+**Descripción:**
+
+Como administrador del sistema quiero poder -------------------
+
+**Validación:**
+  * Se debe poder añadir tratamientos al sistema
+  * Es necesario saber el nombre del paciente
+  * El paciente tiene que estar en el
+  
 **ID:** 09 **Nombre:** Añadir tratamiento
 
 **Prioridad** (Del 1 al 10): 6
