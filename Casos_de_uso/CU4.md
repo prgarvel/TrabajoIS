@@ -9,7 +9,7 @@
 **Flujo principal**
   1. El administrador selecciona la opción de consultar paciente.
   2. A continuación, busca el paciente a mostrar.
-  3. Encuentra al paciente a mostrar.
+  3. Encuentra el paciente a mostrar.
   4. Se muestra la información del paciente.
   
 **Postcondiciones**
