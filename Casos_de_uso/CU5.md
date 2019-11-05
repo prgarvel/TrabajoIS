@@ -1,5 +1,5 @@
 ## Añadir cita
-** ID: ** 5 ** Descripción** Se añade una cita al sistema.
+**ID:** 5 ** Descripción** Se añade una cita al sistema.
 
 ** Actores principales ** Administrador
 
