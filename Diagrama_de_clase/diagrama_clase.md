@@ -1,4 +1,5 @@
 | Clase: *Tratamiento* | 
+| :------- |
 | Clase que almacena el tratamiento de un paciente. Se podra añadir, consultar, modificar y eliminar un tratamiento |
 | Datos |
 
@@ -13,7 +14,7 @@
 
 | Init | Constructor de la clase tratamiento |
 
-| Elemento | Cantidad |
+| Elemento |
 | :------- |
 | Item 1   |
 | Item 2   |
