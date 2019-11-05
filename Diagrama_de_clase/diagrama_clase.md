@@ -1,4 +1,4 @@
-| Clase: *Tratamiento* | 
+| Clase: *Tratamiento* | | |
 | :------- |
 | Clase que almacena el tratamiento de un paciente. Se podra añadir, consultar, modificar y eliminar un tratamiento |
 | Datos |
