@@ -13,9 +13,12 @@
 
 | Init | Constructor de la clase tratamiento |
 
-
+| Elemento |
+| :------- |
+| Item 1   |
+| Item 2   |
 
 | Elemento | Cantidad | Precio |
 | :------- | :------: | -----: |
-| Item 1   | 15       | 15000000000000000000€                                 |
+| Item 1   | 15       | 150€   |
 | Item 2   | 3250     | 23,65€ |
