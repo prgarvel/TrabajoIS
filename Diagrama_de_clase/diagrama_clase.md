@@ -13,7 +13,7 @@
 
 | Init | Constructor de la clase tratamiento |
 
-| Elemento |
+| Elemento | Cantidad |
 | :------- |
 | Item 1   |
 | Item 2   |
