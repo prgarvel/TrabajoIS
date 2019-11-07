@@ -4,7 +4,7 @@
 **Actores principales** Administrador.
 
 **Precondiciones**
- * Ninguna.
+ * No debe de estar almacenado previamente el paciente a registrar
  
 **Flujo principal**
   1. El administrador selecciona la opción de añadir paciente.
