@@ -10,10 +10,11 @@
   1. El administrador selecciona la opción de añadir paciente.
   2. El administrador va completando la información solicitada por el sistema.
   3. El administrador confirma los datos.
+  4. El sistema comprueba la no existencia de dicho paciente.
   4. Los datos se guardan en el sistema.
   
 **Postcondiciones**
   * Ninguna.
 
 **Flujos alternativos**
-  * Ninguno.
+  * Si el paciente a registrar ya se encontraba registrado, el sistema no almacena la información.
