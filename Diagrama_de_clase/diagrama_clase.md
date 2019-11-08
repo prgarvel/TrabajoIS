@@ -13,6 +13,42 @@
 | Modificar tratamiento | Modifica el tratamiento en curso | ||
 | Consultar tratamiento | Consulta un tratamiento de una lista de tratamientos en curso | ||
 
+| Clase: *Cita* | ||
+| :------- | :------: | :----- |
+| Clase que gestiona las citas de todos los pacientes. Se podra añadir, consultar, modificar y eliminar una cita  |||
+| **Datos** | Tipo | Descripción |
+| + dni   | string | DNI del paciente |
+| + fecha | entero | Fecha de la cita |
+| + Observaciones | string | Observaciones referidas a la cita |
+| **Métodos** | |||
+| Init | Constructor de la clase cita | ||
+| Añadir cita | Añade una cita de un paciente a la agenda | ||
+| Eliminar cita | Elimina una cita de la agenda | ||
+| Modificar cita | Modifica la cita en la agenda | ||
+| Consultar cita | Consulta una cita de la lista de citas en la agenda | ||
+
+| Clase: *Agenda* | ||
+| :------- | :------: | :----- |
+| Clase que gestiona la agenda de citas. Se podra consultar la agenda en la fecha o fechas que se desee |||
+| **Datos** | Tipo | Descripción |
+| + dni   | string | DNI del paciente |
+| + fecha | entero | Fecha de la cita |
+| **Métodos** | |||
+| Init | Constructor de la clase agenda | ||
+| Consultar agenda | Consulta una la lista de citas de la agenda | ||
+
+| Clase: *Historial de citas* | ||
+| :------- | :------: | :----- |
+| Clase que almacena el listado de las citas de un paciente |||
+| **Datos** | Tipo | Descripción |
+| + n_historial   | entero | número de historial del paciente |
+| + dni   | string | DNI del paciente del tratamiento |
+| + listado_Citas | array de tratamiento | Listado de las citas de un paciente |
+| **Métodos** | |||
+| Init | Constructor de la clase historial de citas | ||
+| Añadir historial | Añade al historial del paciente cualquier cita nueva o la modificación de una cita | ||
+| Consultar historial | Consultar el historial de un paciente en concreto | ||
+
 
 | Clase: *Historial de tratamiento* | ||
 | :------- | :------: | :----- |
@@ -25,3 +61,5 @@
 | Init | Constructor de la clase historial de tratamientos | ||
 | Añadir historial | Añade al historial del paciente cualquier tratamiento nuevo o un tratamiento que se haya modificado | ||
 | Consultar historial | Consultar el historial de un paciente en concreto | ||
+
+
