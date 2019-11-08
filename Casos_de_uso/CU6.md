@@ -1,10 +1,10 @@
-## Modificar una cita
-**ID:** 6 **Descripción:** Se modifica una cita.
+## Eliminar una cita
+**ID:** 6 **Descripción:** Se elimina una cita.
 
 **Actores principales:** Administrador
 
 **Precondiciones**
-  * Existe la cita que vayamos a modificar
+  * Existe la cita que vayamos a eliminar
 
 **Flujo principal:**
   1. El administrador quiere eliminar una cita
