@@ -1,3 +1,28 @@
+| Clase: *Paciente* | ||
+| :------- | :------: | :----- |
+| Clase que almacena la información relativa a un paciente. Se podrá añadir, consultar, modificar y eliminar un paciente |||
+| **Datos** | Tipo | Descripción |
+| + nombre   | string | Nombre del paciente |
+| + apellidos   | string | Apellidos del paciente |
+| + dni   | string | DNI del paciente |
+| + fecha de nacimiento   | string | Fecha de nacimiento del paciente |
+| + sexo   | string | Sexo del paciente |
+| + Grupo sanguíneo | string | Medicación recetada por el medico |
+| + teléfono   | int | teléfono de contacto del paciente |
+| + dirección   | string | dirección postal del paciente |
+| + email | string | correo electrónico del paciente |
+| + Compañía médica | string | nombre de la compañía a la que pertenezca |
+| + Altura | int | Altura en cm del paciente |
+| + Peso | float | Peso en kg del paciente |
+| + Alergias | string | Posibles alergias que padezca el paciente (medicamentos, alimentarias, etc) |
+| + Patologías | string | Lista con las patalogías que padece (en caso de que las padezca) |
+| **Métodos** | |||
+| Init | Constructor de la clase Paciente | ||
+| Añadir paciente | Añade un paciente a nuestro sistema de ficheros | ||
+| Eliminar paciente| Elimina un paciente a nuestro sistema de ficheros | ||
+| Modificar paciente | Modifica un paciente de nuestro sistema de ficheros | ||
+| Consultar paciente | Muestra los datos relativos a un paciente | ||
+
 | Clase: *Tratamiento* | ||
 | :------- | :------: | :----- |
 | Clase que almacena el tratamiento de un paciente. Se podra añadir, consultar, modificar y eliminar un tratamiento |||
