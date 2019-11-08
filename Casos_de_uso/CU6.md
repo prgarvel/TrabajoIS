@@ -1,5 +1,5 @@
 ## Modificar una cita
-**ID:** 7 **Descripcion:** Modificamos una cita existente en nuestro sistema
+**ID:** 6 **Descripcion:** Modificamos una cita existente en nuestro sistema
 
 **Actores principales** Administrador
 
