@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <iostream>
-#include 'funcionesAuxiliares.hpp'
+#include "funcionesAuxiliares.hpp"
 
 using namespace std;
 
