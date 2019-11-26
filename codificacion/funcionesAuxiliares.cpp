@@ -13,3 +13,16 @@ void menu()
 		cin >> opcion;
 	}while(opcion!=0);
 }
+
+string comprobarDni(const int &dni)
+{
+	string letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+	int indice = dni%23;
+	return letras.substr(indice,1);
+}
+
+bool validarEmail(string email)
+{
+   const std::regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
+   return std::regex_match(email, pattern);
+}

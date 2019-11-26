@@ -27,6 +27,8 @@ class Paciente
 
 		float _peso;
 
+		
+
 	public:
 
 		Paciente(){};
@@ -51,23 +53,27 @@ class Paciente
 
 		inline void setNombre(const std::string &cadena) { _nombre = cadena; }
 		inline void setApellidos(const std::string &cadena) { _apellidos = cadena; }
-		void setDni(const std::string &cadena);
-		void setFecha(const std::string &cadena);
-		void setSexo(const std::string &cadena);
-		void setGrupo(const std::string &cadena);
-		void setEmail(const std::string &cadena);
-		void setDireccion(const std::string &cadena);
+		inline void setDni(const std::string &cadena) { _dni = cadena; }
+		inline void setFecha(const std::string &cadena) { _fechaNacimiento = cadena; }
+		inline void setSexo(const std::string &cadena) { _sexo = cadena; }
+		inline void setGrupo(const std::string &cadena) { _grupoSanguineo = cadena; }
+		inline void setEmail(const std::string &cadena) { _email = cadena; }
+		inline void setDireccion(const std::string &cadena) { _direccion = cadena; }
 		inline void setMutua(const std::string &cadena) { _mutua = cadena; }
+
+		std::string addDni();
+		std::string addFecha();
+		std::string addSexo();
+		std::string addGrupo();
+		std::string addEmail();
 
 		void addPatologia(const std::string &cadena) { _patologias.push_back(cadena); }
 		void popPatologia(const std::string &cadena);
-		void clearPatalogias(){ _patologias.clear(); };
+		void borrarPatologias(){ _patologias.clear(); }
 
 		void addAlergia(const std::string &cadena) { _alergias.push_back(cadena); }
 		void popAlergia(const std::string &cadena);
-		void clearAlergias(){ _alergias.clear(); };
-
-		//Otros métodos
+		void borrarAlergias(){ _alergias.clear(); }
 
 		void printVector(const std::vector <std::string> &v);
 

@@ -1,3 +1,0 @@
-/home/lolo/Documentos/3º/IS/TrabajoIS/codificacion/CMakeFiles/edit_cache.dir
-/home/lolo/Documentos/3º/IS/TrabajoIS/codificacion/CMakeFiles/rebuild_cache.dir
-/home/lolo/Documentos/3º/IS/TrabajoIS/codificacion/CMakeFiles/main.x.dir
