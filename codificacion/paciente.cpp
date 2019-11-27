@@ -48,6 +48,7 @@ std::string Paciente::addFecha()
 
 	if(dia < 1 || dia > 31 || mes < 1 || mes > 12 || year < 1910 )
 	{
+		std::cout << "Opción no válida, se estable el valor como no definido" << std::endl;
 		return "Sin definir";
 	}
 
@@ -62,13 +63,18 @@ std::string Paciente::addSexo()
 	std::cout << "Introduzca 1 si es mujer o 0 si es hombre: ";
 	std::cin >> opcion;
 
-	if (opcion > 0)
+	if(opcion == 1)
 	{
 		return "Mujer";
 	}
-	else
+	else if(opcion == 1)
 	{
 		return "Hombre";
+	}
+	else
+	{
+		std::cout << "Opción no válida, se estable el valor como no definido" << std::endl;
+		return "Sin definir";
 	}
 }
 
@@ -101,7 +107,9 @@ std::string Paciente::addGrupo()
 		break;
 
 		default:
+			std::cout << "Opción no válida, se estable el valor como no definido" << std::endl;
 			sangre = "Sin definir";
+			return sangre;
 	}
 
 	std::cout << "Indique si el grupo es positivo o negativo (1 positivo, 0 negativo): ";
@@ -118,7 +126,8 @@ std::string Paciente::addGrupo()
 		break;
 
 		default:
-			sangre += " sin definir";
+			std::cout << "Opción no válida, se estable el valor como no definido" << std::endl;
+			sangre = "Sin definir";
 	}
 
 	return sangre;
@@ -136,7 +145,58 @@ std::string Paciente::addEmail()
 	}
 	else
 	{
-		return "indefinido";
+		std::cout << "Opción no válida, se estable el valor como no definido" << std::endl;
+		return "Sin definir";
+	}
+}
+
+std::string Paciente::addCadena(const std::string &titulo)
+{
+	std::string cadena;
+	std::cout << "Introduzca " << titulo << ": ";
+	std::getline(std::cin,cadena);
+
+	return cadena;
+}
+void Paciente::accessSetters(std::string &cadena, const int &opcion)
+{
+	switch(opcion)
+	{
+		case 0:
+			setNombre(cadena);
+		break;
+
+		case 1:
+			setApellidos(cadena);
+		break;
+
+		case 2:
+			setDni(cadena);
+		break;
+
+		case 3:
+			setFecha(cadena);
+		break;
+
+		case 4:
+			setSexo(cadena);
+		break;
+
+		case 5:
+			setGrupo(cadena);
+		break;
+
+		case 6:
+			setEmail(cadena);
+		break;
+
+		case 7:
+			setDireccion(cadena);
+		break;
+
+		case 8:
+			setMutua(cadena);
+		break;
 	}
 }
 

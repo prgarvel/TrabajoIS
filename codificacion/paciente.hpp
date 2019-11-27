@@ -27,11 +27,32 @@ class Paciente
 
 		float _peso;
 
-		
+		//Métodos set
+
+		inline void setNombre(const std::string &cadena) { _nombre = cadena; }
+		inline void setApellidos(const std::string &cadena) { _apellidos = cadena; }
+		inline void setDni(const std::string &cadena) { _dni = cadena; }
+		inline void setFecha(const std::string &cadena) { _fechaNacimiento = cadena; }
+		inline void setSexo(const std::string &cadena) { _sexo = cadena; }
+		inline void setGrupo(const std::string &cadena) { _grupoSanguineo = cadena; }
+		inline void setEmail(const std::string &cadena) { _email = cadena; }
+		inline void setDireccion(const std::string &cadena) { _direccion = cadena; }
+		inline void setMutua(const std::string &cadena) { _mutua = cadena; }
 
 	public:
 
-		Paciente(){};
+		Paciente()
+		{
+			setNombre("Sin definir");
+			setApellidos("Sin definir");
+			setDni("Sin definir");
+			setFecha("Sin definir");
+			setSexo("Sin definir");
+			setGrupo("Sin definir");
+			setEmail("Sin definir");
+			setDireccion("Sin definir");
+			setMutua("Sin definir");
+		};
 
 		~Paciente(){};
 
@@ -49,23 +70,16 @@ class Paciente
 		inline std::vector <std::string> getPatologias() const { return _patologias; }
 		inline std::vector <std::string> getAlergias() const { return _alergias; }
 
-		//Métodos set
-
-		inline void setNombre(const std::string &cadena) { _nombre = cadena; }
-		inline void setApellidos(const std::string &cadena) { _apellidos = cadena; }
-		inline void setDni(const std::string &cadena) { _dni = cadena; }
-		inline void setFecha(const std::string &cadena) { _fechaNacimiento = cadena; }
-		inline void setSexo(const std::string &cadena) { _sexo = cadena; }
-		inline void setGrupo(const std::string &cadena) { _grupoSanguineo = cadena; }
-		inline void setEmail(const std::string &cadena) { _email = cadena; }
-		inline void setDireccion(const std::string &cadena) { _direccion = cadena; }
-		inline void setMutua(const std::string &cadena) { _mutua = cadena; }
+		//Funciones intermedias
 
 		std::string addDni();
 		std::string addFecha();
 		std::string addSexo();
 		std::string addGrupo();
 		std::string addEmail();
+		std::string addCadena(const std::string &titulo);
+
+		void accessSetters(std::string &cadena, const int &opcion);
 
 		void addPatologia(const std::string &cadena) { _patologias.push_back(cadena); }
 		void popPatologia(const std::string &cadena);
@@ -74,6 +88,12 @@ class Paciente
 		void addAlergia(const std::string &cadena) { _alergias.push_back(cadena); }
 		void popAlergia(const std::string &cadena);
 		void borrarAlergias(){ _alergias.clear(); }
+
+		std::vector<std::string> leerPatologias(const std::string &fichero);
+		std::vector<std::string> leerAlergias(const std::string &fichero);
+
+		void escribirPatologias(const std::vector<std::string> &vector);
+		void escribirAlergias(const std::vector<std::string> &vector);
 
 		void printVector(const std::vector <std::string> &v);
 
