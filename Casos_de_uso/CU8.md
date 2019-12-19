@@ -1,7 +1,7 @@
 ## Consultar una cita
 **ID:** 8 **Descripcion:** Modificamos una cita existente en nuestro sistema
 
-**Actores principales** Administrador **Actores secundarios:** Paciente
+**Actores principales** Administrador
 
 **Precondiciones**
   * Ninguna
