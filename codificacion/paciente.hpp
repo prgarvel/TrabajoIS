@@ -39,6 +39,17 @@ class Paciente
 		inline void setDireccion(const std::string &cadena) { _direccion = cadena; }
 		inline void setMutua(const std::string &cadena) { _mutua = cadena; }
 
+		void borrarPatologia(const int &pos);
+		void cleanPatologias(){ _patologias.clear(); }
+
+		void borrarAlergia(const int &pos);
+		void cleanAlergias(){ _alergias.clear(); }
+
+		void setPatologia(const std::string &cadena) { _patologias.push_back(cadena); }
+		void setAlergia(const std::string &cadena) { _alergias.push_back(cadena); }
+
+		void setVector(const int &opcion, const std::vector<std::string> &v);
+
 	public:
 
 		Paciente()
@@ -77,23 +88,19 @@ class Paciente
 		std::string addSexo();
 		std::string addGrupo();
 		std::string addEmail();
-		std::string addCadena(const std::string &titulo);
+		std::string addCadena(const std::string &titulo="");
 
 		void accessSetters(std::string &cadena, const int &opcion);
 
-		void addPatologia(const std::string &cadena) { _patologias.push_back(cadena); }
-		void popPatologia(const std::string &cadena);
-		void borrarPatologias(){ _patologias.clear(); }
+		int findCadena(const std::vector <std::string> &v, const std::string &cadena);
+		void borrar(const int &opcion, const int &pos);
+		
 
-		void addAlergia(const std::string &cadena) { _alergias.push_back(cadena); }
-		void popAlergia(const std::string &cadena);
-		void borrarAlergias(){ _alergias.clear(); }
+		//Entrada y salida ficheros
 
-		std::vector<std::string> leerPatologias(const std::string &fichero);
-		std::vector<std::string> leerAlergias(const std::string &fichero);
+		bool leerFichero(const std::string &fichero, std::vector <std::string> &v);
+		void escribirFichero(const std::string &fichero, const std::vector<std::string> &v);
 
-		void escribirPatologias(const std::vector<std::string> &vector);
-		void escribirAlergias(const std::vector<std::string> &vector);
 
 		void printVector(const std::vector <std::string> &v);
 

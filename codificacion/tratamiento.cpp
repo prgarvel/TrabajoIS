@@ -3,10 +3,10 @@
 Tratamiento::Tratamiento(string DNI)
 {
 	_DNI=DNI;
-	_observaciones="";
+	_observaciones="Ninguna";
 }
 
 Tratamiento::Tratamiento()
 {
-	_observaciones="";
+	_observaciones="Ninguna";
 }

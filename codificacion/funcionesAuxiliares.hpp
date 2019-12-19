@@ -3,12 +3,16 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <vector>
 #include <string>
 #include <regex>
 
+using namespace std;
 
-void menu();
-std::string comprobarDni(const int &dni);
-bool validarEmail(std::string email);
+int menu();
+int submenuTratamientos();
+int submenuHistorial();
+string comprobarDni(const int &dni);
+bool validarEmail(string email);
 
 #endif

@@ -2,6 +2,38 @@
 #include "funcionesAuxiliares.hpp"
 #include <cstdlib>
 #include <iostream>
+#include <limits>
+#include <fstream>
+
+//Métodos privados
+void Paciente::borrarPatologia(const int &pos)
+{
+	_patologias.erase(_patologias.begin()+pos);
+}
+
+void Paciente::borrarAlergia(const int &pos)
+{
+	_alergias.erase(_alergias.begin()+pos);
+}
+
+void Paciente::setVector(const int &opcion, const std::vector<std::string> &v)
+{
+	switch(opcion)
+	{
+		case 0:
+			cleanPatologias();
+			_patologias.resize(v.size());
+			_patologias = v;
+		break;
+
+		case 1:
+			cleanAlergias();
+			_alergias.resize(v.size());
+			_alergias = v;
+		break;
+	}
+}
+//Métodos públicos
 
 std::string Paciente::addDni()
 {
@@ -136,6 +168,8 @@ std::string Paciente::addGrupo()
 std::string Paciente::addEmail()
 {
 	std::string cadena;
+	std::cin.clear();
+	std::cin.ignore(std::numeric_limits<int>::max(),'\n');
 	std::cout << "Introduzca el email: ";
 	std::cin >> cadena;
 
@@ -153,6 +187,8 @@ std::string Paciente::addEmail()
 std::string Paciente::addCadena(const std::string &titulo)
 {
 	std::string cadena;
+	std::cin.clear();
+	std::cin.ignore(std::numeric_limits<int>::max(),'\n');
 	std::cout << "Introduzca " << titulo << ": ";
 	std::getline(std::cin,cadena);
 
@@ -200,12 +236,77 @@ void Paciente::accessSetters(std::string &cadena, const int &opcion)
 	}
 }
 
-void Paciente::popPatologia(const std::string &cadena)
+int Paciente::findCadena(const std::vector <std::string> &v, const std::string &cadena)
 {
+	for(int i=0;i<v.size();i++)
+	{
+		if(v[i] == cadena)
+		{
+			return i;
+		}
+	}
+	return -1;
+}
 
+//Método intermedio
+void Paciente::borrar(const int &opcion, const int &pos)
+{
+	if(pos != -1)
+	{
+		switch (opcion)
+		{
+			case 0:
+				borrarPatologia(pos);
+			break;
+
+			case 1:
+				borrarAlergia(pos);
+			break;
+		}
+	}	
 }
 
 void Paciente::printVector(const std::vector <std::string> &v)
 {
 
 }
+
+bool Paciente::leerFichero(const std::string &fichero, std::vector <std::string> &v)
+{
+	ifstream file(fichero);
+	string aux;
+
+	if(!file)
+	{
+		return false;
+	}
+	else
+	{
+		while(!file.eof())
+		{
+			file >> aux;
+			v.push_back(aux);
+		}
+	
+		//Siempre guarda el último elemento 2 veces, se quita uno
+		v.pop_back();
+	}
+	
+	file.close();
+
+	return true;
+}
+
+void Paciente::escribirFichero(const std::string &fichero, const std::vector<std::string> &v)
+{
+	ofstream file(fichero);
+
+	for(int i=0;i<v.size();i++)
+	{
+		file << v[i] << std::endl;
+	}
+
+	file.close();
+}
+
+	
