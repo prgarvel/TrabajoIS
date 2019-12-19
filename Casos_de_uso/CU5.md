@@ -1,9 +1,9 @@
 ## Añadir cita
 **ID:** 5 **Descripción** Se añade una cita al sistema.
 
-** Actores principales ** Administrador
+**Actores principales** Administrador
 
-** Precondicion ** 
+**Precondicion * 
    *se verifica que no exista una cita en la fecha indicada* 
  
  **flujo principal**
