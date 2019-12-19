@@ -15,5 +15,5 @@
  **Postcondiciones**
  los datos quedan guardados en el sistema.
  
- **flujos alternativos **
- ninguno.
+ **flujos alternativos**
+ Ninguno.
