@@ -3,7 +3,7 @@
 
 **Actores principales** Administrador
 
-**Precondicion * 
+**Precondicion** 
    *se verifica que no exista una cita en la fecha indicada* 
  
  **flujo principal**
