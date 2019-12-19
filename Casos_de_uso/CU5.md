@@ -13,7 +13,7 @@
   4. Los datos se guardan en el sistema.
   
  **Postcondiciones**
- los datos quedan guardados en el sistema.
+ * Los datos quedan guardados en el sistema.
  
  **flujos alternativos**
- Ninguno.
+ * Ninguno.
