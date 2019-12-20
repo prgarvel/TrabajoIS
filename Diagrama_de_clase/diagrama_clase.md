@@ -79,7 +79,6 @@
 | :------- | :------: | :----- |
 | Clase que almacena el listado de tratamiento de un paciente |||
 | **Datos** | Tipo | Descripción |
-| + n_historial   | entero | número de historial del paciente |
 | + dni   | string | DNI del paciente del tratamiento |
 | + listado_tratamientos | array de tratamiento | Listado de los tratamientos de un paciente |
 | **Métodos** | |||
