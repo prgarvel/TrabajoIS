@@ -8,8 +8,8 @@
 #include "cita.hpp"
 
 	void menu();
-	void anhadirCita(vector<Cita> vectorCitas);
-	void consultarCita(vector<Cita> vectorCitas);
+	void anhadirCita(vector<Cita> &vectorCitas);
+	void consultarCita(const vector<Cita> &vectorCitas);
 	
 
 #endif

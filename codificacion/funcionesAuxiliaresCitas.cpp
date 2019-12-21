@@ -18,7 +18,7 @@ void menu(){
 		cout << endl;
 		cout << "Introduce la opcion:" << endl ;
 		cout << "1) Consultar Agenda." << endl;
-    		cout << "2) Añadir cita." << endl;
+    	cout << "2) Añadir cita." << endl;
 		cout << "3) Eliminar cita." << endl;
 		cout << "4) Modificar cita." << endl;
 		cout << "0) Salir." << endl;
@@ -55,8 +55,8 @@ void menu(){
 	
 
 }
-
-void anhadirCita(vector<Cita> vectorCitas){
+//El fallo está en que no usas punteros
+void anhadirCita(vector<Cita> &vectorCitas){
 	string dni, nombre, apellidos, fecha;
 	Cita citaAuxiliar;
 	
@@ -77,7 +77,7 @@ void anhadirCita(vector<Cita> vectorCitas){
 
 }
 
-void consultarCita(vector<Cita> vectorCitas){
+void consultarCita(const vector<Cita> &vectorCitas){
 	
 	if(vectorCitas.size()==0){
 		cout << "No hay ninguna cita guardada. " << endl << endl;
