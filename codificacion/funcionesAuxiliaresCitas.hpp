@@ -10,6 +10,7 @@
 	void menu();
 	void anhadirCita(vector<Cita> &vectorCitas);
 	void consultarCita(const vector<Cita> &vectorCitas);
-	
+	void eliminarCita(vector<Cita> &vectorCitas);
+	void modificarCita(vector<Cita> &vectorCitas);
 
 #endif
