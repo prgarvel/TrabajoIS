@@ -11,11 +11,8 @@
 | + teléfono   | int | Teléfono de contacto del paciente |
 | + dirección   | string | Dirección postal del paciente |
 | + email | string | Correo electrónico del paciente |
-| + Compañía médica | string | Nombre de la compañía a la que pertenezca |
 | + Altura | int | Altura en cm del paciente |
 | + Peso | float | Peso en kg del paciente |
-| + Alergias | string | Posibles alergias que padezca el paciente (medicamentos, alimentarias, etc) |
-| + Patologías | string | Lista con las patalogías que padece (en caso de que las padezca) |
 | **Métodos** | |||
 | Init | Constructor de la clase Paciente | ||
 | Añadir paciente | Añade un paciente en nuestro sistema de ficheros | ||
@@ -43,37 +40,24 @@
 | Clase que gestiona las citas de todos los pacientes. Se podra añadir, consultar, modificar y eliminar una cita  |||
 | **Datos** | Tipo | Descripción |
 | + dni   | string | DNI del paciente |
-| + fecha | entero | Fecha de la cita |
+| + fecha | string | Fecha de la cita |
+| + hora | string | Hora de la cita |
 | + Observaciones | string | Observaciones referidas a la cita |
 | **Métodos** | |||
 | Init | Constructor de la clase cita | ||
-| Añadir cita | Añade una cita de un paciente a la agenda | ||
-| Eliminar cita | Elimina una cita de la agenda | ||
-| Modificar cita | Modifica la cita en la agenda | ||
-| Consultar cita | Consulta una cita de la lista de citas en la agenda | ||
+| Consultar cita | Consulta una cita de la agenda de forma exauhstiva | ||
 
 | Clase: *Agenda* | ||
 | :------- | :------: | :----- |
 | Clase que gestiona la agenda de citas. Se podra consultar la agenda en la fecha o fechas que se desee |||
 | **Datos** | Tipo | Descripción |
-| + dni   | string | DNI del paciente |
-| + fecha | entero | Fecha de la cita |
+| + listado_citas   | Array de citas | Conjunto de las citas de la agenda |
 | **Métodos** | |||
 | Init | Constructor de la clase agenda | ||
 | Consultar agenda | Consulta una la lista de citas de la agenda | ||
-
-| Clase: *Historial de citas* | ||
-| :------- | :------: | :----- |
-| Clase que almacena el listado de las citas de un paciente |||
-| **Datos** | Tipo | Descripción |
-| + n_historial   | entero | número de historial del paciente |
-| + dni   | string | DNI del paciente del tratamiento |
-| + listado_Citas | array de tratamiento | Listado de las citas de un paciente |
-| **Métodos** | |||
-| Init | Constructor de la clase historial de citas | ||
-| Añadir historial | Añade al historial del paciente cualquier cita nueva o la modificación de una cita | ||
-| Consultar historial | Consultar el historial de un paciente en concreto | ||
-
+| Añadir cita | Añade una cita de un paciente a la agenda | ||
+| Eliminar cita | Elimina una cita de la agenda | ||
+| Modificar cita | Modifica la cita en la agenda | ||
 
 | Clase: *Historial de tratamiento* | ||
 | :------- | :------: | :----- |
