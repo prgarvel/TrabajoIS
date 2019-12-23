@@ -137,7 +137,7 @@ void modificarPaciente(vector <Paciente> & v){
 
 				case 1:
 					v[pos].setNombre(addNombre());
-					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No: ";
+					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No\n\nEscoja una opción: ";
 					cin >> opcion;
 					if(opcion != 1)
 					{
@@ -147,7 +147,7 @@ void modificarPaciente(vector <Paciente> & v){
 
 				case 2:
 					v[pos].setApellidos(addApellidos());
-					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No: ";
+					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No\n\nEscoja una opción: ";
 					cin >> opcion;
 					if(opcion != 1)
 					{
@@ -157,7 +157,7 @@ void modificarPaciente(vector <Paciente> & v){
 
 				case 3:
 					v[pos].setFecha(addFecha());
-					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No: ";
+					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No\n\nEscoja una opción: ";
 					cin >> opcion;
 					if(opcion != 1)
 					{
@@ -167,7 +167,7 @@ void modificarPaciente(vector <Paciente> & v){
 
 				case 4:
 					v[pos].setSexo(addSexo());
-					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No: ";
+					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No\n\nEscoja una opción: ";
 					cin >> opcion;
 					if(opcion != 1)
 					{
@@ -177,7 +177,7 @@ void modificarPaciente(vector <Paciente> & v){
 
 				case 5:
 					v[pos].setGrupo(addGrupo());
-					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No";
+					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No\n\nEscoja una opción: ";
 					cin >> opcion;
 					if(opcion != 1)
 					{
@@ -187,7 +187,7 @@ void modificarPaciente(vector <Paciente> & v){
 
 				case 6:
 					v[pos].setEmail(addEmail());
-					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No: ";
+					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No\n\nEscoja una opción: ";
 					cin >> opcion;
 					if(opcion != 1)
 					{
@@ -197,7 +197,7 @@ void modificarPaciente(vector <Paciente> & v){
 
 				case 7:
 					v[pos].setDireccion(addDireccion());
-					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No";
+					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No\n\nEscoja una opción: ";
 					cin >> opcion;
 					if(opcion != 1)
 					{
@@ -207,7 +207,7 @@ void modificarPaciente(vector <Paciente> & v){
 
 				case 8:
 					v[pos].setTelefono(addTelefono());
-					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No:";
+					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No\n\nEscoja una opción: ";
 					cin >> opcion;
 					if(opcion != 1)
 					{
@@ -217,7 +217,7 @@ void modificarPaciente(vector <Paciente> & v){
 
 				case 9:
 					v[pos].setAltura(addAltura());
-					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No";
+					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No\n\nEscoja una opción: ";
 					cin >> opcion;
 					if(opcion != 1)
 					{
@@ -227,7 +227,7 @@ void modificarPaciente(vector <Paciente> & v){
 
 				case 10:
 					v[pos].setPeso(addPeso());
-					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No: ";
+					cout << "¿Desea modificar algún otro parámetro?\n\t1) Si\n\t0) No\n\nEscoja una opción: ";
 					cin >> opcion;
 					if(opcion != 1)
 					{
