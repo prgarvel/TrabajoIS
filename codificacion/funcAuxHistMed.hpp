@@ -4,7 +4,7 @@
 #include "funcionesAuxTratamiento.hpp"
 #include "historialMed.hpp"
 
-HistorialMedico cargarHistorialPaciente(string DNIP);
+void cargarHistorialPaciente(string DNIP , vector <HistorialMedico> & v);
 bool existeHist(vector <HistorialMedico> v, string DNIP);
 void mostrarHistoriales(vector <HistorialMedico> v);
 

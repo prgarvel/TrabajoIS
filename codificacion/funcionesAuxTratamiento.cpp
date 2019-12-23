@@ -4,8 +4,10 @@
 #include "funcionesAuxTratamiento.hpp"
 #include "funcAuxHistMed.hpp"
 #include <string>
+#include "funcionesAuxiliares.hpp"
+#include "paciente.hpp"
 
-Tratamiento anyadirTratamiento(vector <HistorialMedico> &v)
+void anyadirTratamiento(vector <Tratamiento>  & trat, vector <HistorialMedico> &v, vector <Paciente> p)
 {
 
 	string DNI;
@@ -22,12 +24,11 @@ Tratamiento anyadirTratamiento(vector <HistorialMedico> &v)
 	getline(cin, DNI);
 
 	//Si no existe el paciente que no pueda introducirse el tratamiento
-	/*
-	if(exitePaciente(DNI)==false){
+	
+	if(existePaciente(p,DNI)==false){
 		cout << "El paciente no exite" << endl;
-		exit(-1);
-	}
-	*/
+	}else{
+	
 	
 	Tratamiento elemento(DNI);
 
@@ -69,7 +70,7 @@ Tratamiento anyadirTratamiento(vector <HistorialMedico> &v)
 		
 		if( f.is_open() ){
 			f.close();
-			v.push_back(cargarHistorialPaciente(DNI));
+			cargarHistorialPaciente(DNI,v);
 
 			for(i=0;i<v.size();i++){
 				if(v[i].getDNI()==DNI){
@@ -92,9 +93,8 @@ Tratamiento anyadirTratamiento(vector <HistorialMedico> &v)
 		}
 
 	}
-
-
-	return elemento;
+	trat.push_back(elemento);
+	}
 
 }
 
@@ -175,7 +175,7 @@ void eliminarTratamiento(vector<Tratamiento> & v){
 	
 }
 
-void modificarTratamiento(vector<Tratamiento> & v){
+void modificarTratamiento(vector<Tratamiento> & v, vector <HistorialMedico> &vh){
 
 	int pos,i,opcion;
 	vector <int> llaves;
@@ -243,6 +243,35 @@ void modificarTratamiento(vector<Tratamiento> & v){
 
 		}while(opcion!=0);
 
+		if(existeHist(vh, v[pos].getDNI())==false){
+			string ruta="historiales/"+v[pos].getDNI()+".txt";
+			ifstream f(ruta.c_str());
+			
+			if( f.is_open() ){
+				f.close();
+				cargarHistorialPaciente(v[pos].getDNI(),vh);
+
+				for(i=0;i<vh.size();i++){
+					if(vh[i].getDNI()==v[pos].getDNI()){
+						vh[i].anyadirAlHistorial(v[pos]);
+					}
+				}
+			}else{
+				HistorialMedico histpaciente;
+				histpaciente.setDNI(v[pos].getDNI());
+				histpaciente.anyadirAlHistorial(v[pos]);
+				vh.push_back(histpaciente);
+			}
+
+		}else{
+
+			for(i=0;i<vh.size();i++){
+				if(vh[i].getDNI()==v[pos].getDNI()){
+					vh[i].anyadirAlHistorial(v[pos]);
+				}
+			}
+
+		}
 
 	}else
 	{
@@ -299,11 +328,10 @@ vector <Tratamiento> CargarTratamientos(){
 
 	if(!f)
 	{
-		cout << "No se ha podido cargar la base de datos." << endl;
+		cout << "Tratamientos: " << endl;
+		cout << "Base de datos no encontrada o sin crear" << endl;
 	}
 	else{
-
-	//FALTA LO DE ABAJO EN EL WHILE
 
 	while(getline(f, DNI) && f.eof()==0)	{
 	

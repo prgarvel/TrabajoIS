@@ -3,7 +3,7 @@
 
 #include "funcAuxHistMed.hpp"
 
-HistorialMedico cargarHistorialPaciente(string DNIP){
+void cargarHistorialPaciente(string DNIP , vector <HistorialMedico> & v){
 
 	string ruta="historiales/"+DNIP+".txt";
 
@@ -41,12 +41,14 @@ HistorialMedico cargarHistorialPaciente(string DNIP){
 
 	f.close();
 
-	}
 
 	histpaciente.setDNI(DNIP);
 	histpaciente.setHistorial(tratamientos);
 
-	return histpaciente;
+	v.push_back(histpaciente);
+
+	cout << endl << "El historial cargado correctamente." << endl;
+	}
 
 
 }

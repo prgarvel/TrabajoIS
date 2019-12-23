@@ -2,9 +2,14 @@
 #define _CITAS_HPP
 
 #include "cita.hpp"
+#include "funcionesAuxiliares.hpp"
+#include "funcionesAuxiliaresCitas.hpp"
+#include "funcionesAuxTratamiento.hpp"
+#include "paciente.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 class Citas
 {
@@ -25,10 +30,14 @@ class Citas
 		inline vector<Cita> getCitas() const { return _citas; }
 
 		inline void addCita(const Cita &c) { _citas.push_back(c); }
-		void mostrarCita(const string &dni);
-		void borrarCita(const string &dni);
-		void modificarCita(const string &dni);
+		bool existeFecha(string fecha, string hora);
+		void listadoCitas();
+		void borrarCita();
+		void anyadirCita(vector <Paciente> v);
+		void modificarCita();
 		int buscarCita(const string &dni);//Para que te devuelva la posición de la cita en el vector y ya decidas que hacer con la cita (eliminarla, modificarla, etc...)
+		void cargarAgenda();
+		void guardarAgenda();
 
 };
 #endif

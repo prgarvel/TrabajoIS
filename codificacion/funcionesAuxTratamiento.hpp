@@ -3,15 +3,16 @@
 
 #include "tratamiento.hpp"
 #include "historialMed.hpp"
+#include "paciente.hpp"
 #include <vector>
 #include <fstream>
 #include <stdio.h>  
 
-Tratamiento anyadirTratamiento(vector <HistorialMedico> &v);
+void anyadirTratamiento(vector <Tratamiento>  & trat, vector <HistorialMedico> &v, vector <Paciente> p);
 void consultarTratamiento(vector<Tratamiento> v);
 void consultarTratamientoExaustivo(int pos, vector<Tratamiento> v);
 void eliminarTratamiento(vector<Tratamiento> & v);
-void modificarTratamiento(vector<Tratamiento> & v);
+void modificarTratamiento(vector<Tratamiento> & v, vector <HistorialMedico> &vh);
 string ModMedicacion();
 int ModDuracion();
 string ModObservaciones();

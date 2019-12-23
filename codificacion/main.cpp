@@ -3,9 +3,12 @@
 #include <string>
 #include <vector>
 #include "funcionesAuxiliares.hpp"
+#include "funcionesAuxiliaresPaciente.hpp"
 #include "funcionesAuxTratamiento.hpp"
 #include "tratamiento.hpp"
 #include "funcAuxHistMed.hpp"
+#include "citas.hpp"
+#include "paciente.hpp"
 
 using namespace std;
 
@@ -15,6 +18,8 @@ int main(){
 	int submenu=-1;
 	string DNIP;
 	int i;
+	Citas agenda;
+	agenda.cargarAgenda();
 
 	vector <Tratamiento> tratamientos_en_curso;
 	tratamientos_en_curso.resize(0);
@@ -24,6 +29,17 @@ int main(){
 	vector <HistorialMedico> historiales_medicos;
 	historiales_medicos.resize(0);
 
+	vector <Paciente> pacientes_actuales;
+	pacientes_actuales.resize(0);
+	bool lectura = leerFichero(pacientes_actuales);
+
+	if(!lectura)
+	{
+		cout << "Pacientes: " << endl;
+		cout << "Base de datos no encontrada o sin crear" << endl;
+	}
+
+
 	do{
 		opcion=menu();
 
@@ -31,6 +47,39 @@ int main(){
 		switch(opcion)
 		{
 			case 1:
+
+
+				do{
+					submenu=submenupaciente();
+
+
+					switch(submenu)
+					{
+						case 1:
+							anyadirPaciente(pacientes_actuales);
+							break;
+
+						case 2:
+							eliminarPaciente(pacientes_actuales);
+							break;
+
+						case 3:
+							modificarPaciente(pacientes_actuales);
+							break;
+
+						case 4:
+							consultarPacientes(pacientes_actuales);
+							break;
+
+						case 0:
+							break;
+
+						default:
+							cout << "Opcion equivocada" << endl << endl;
+							submenu = 0;
+					}
+
+				}while(submenu!=0);
 
 				break;
 
@@ -43,9 +92,7 @@ int main(){
 					switch(submenu)
 					{
 						case 1:
-							//Tratamiento aux;
-							//aux=anyadirTratamiento();
-							tratamientos_en_curso.push_back(anyadirTratamiento(historiales_medicos));
+							anyadirTratamiento(tratamientos_en_curso, historiales_medicos, pacientes_actuales);
 							break;
 
 						case 2:
@@ -53,7 +100,7 @@ int main(){
 							break;
 
 						case 3:
-							modificarTratamiento(tratamientos_en_curso);
+							modificarTratamiento(tratamientos_en_curso, historiales_medicos);
 							break;
 
 						case 4:
@@ -64,7 +111,7 @@ int main(){
 							break;
 
 						default:
-							cout << "Opcion equivicada" << endl << endl;
+							cout << "Opcion equivocada" << endl << endl;
 					}
 
 				}while(submenu!=0);
@@ -72,7 +119,36 @@ int main(){
 				break;
 
 			case 3:
+				do{
+					submenu=submenuAgenda();
 
+
+					switch(submenu)
+					{
+						case 1:
+							agenda.anyadirCita(pacientes_actuales);
+							break;
+
+						case 2:
+							agenda.borrarCita();
+							break;
+
+						case 3:
+							agenda.modificarCita();
+							break;
+
+						case 4:
+							agenda.listadoCitas();
+							break;
+
+						case 0:
+							break;
+
+						default:
+							cout << "Opcion equivicada" << endl << endl;
+					}
+
+				}while(submenu!=0);
 				break;
 
 			case 4:// Para historiales
@@ -87,8 +163,7 @@ int main(){
 							cin >> DNIP;
 							if(existeHist(historiales_medicos,DNIP)==false) // El historial del paciente no esta cargado
 							{
-								historiales_medicos.push_back(cargarHistorialPaciente(DNIP));
-								cout << endl << "El historial cargado correctamente." << endl;
+								cargarHistorialPaciente(DNIP, historiales_medicos);
 							}else{
 								cout << endl << "El historial del paciente ya esta cargado." << endl;
 							}
@@ -103,7 +178,7 @@ int main(){
 							break;
 
 						default:
-							cout << "Opcion equivicada" << endl << endl;
+							cout << "Opcion equivocada" << endl << endl;
 					}
 
 				}while(submenu!=0);
@@ -115,7 +190,7 @@ int main(){
 				break;
 
 			default:
-				cout << "Opcion equivicada" << endl << endl;
+				cout << "Opcion equivocada" << endl << endl;
 		}
 
 	}while(opcion!=0);
@@ -127,6 +202,8 @@ int main(){
 
 
 	GuardarTratamientos(tratamientos_en_curso);
+	escribirFichero(pacientes_actuales);
+	agenda.guardarAgenda();
 
 	
 	return 0;
